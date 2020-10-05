@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>tidusete.github.io/posts/esto-es-hugo/</loc>
-    <lastmod>2020-10-04T19:20:48+02:00</lastmod>
+    <loc>tidusete.github.io/about/</loc>
+    <lastmod>2020-10-04T22:45:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>tidusete.github.io/posts/generar-mas/</loc>
+    <lastmod>2020-10-04T19:49:18+02:00</lastmod>
   </url>
   
   <url>
     <loc>tidusete.github.io/posts/</loc>
-    <lastmod>2020-10-04T19:20:48+02:00</lastmod>
+    <lastmod>2020-10-04T19:49:18+02:00</lastmod>
   </url>
   
   <url>
     <loc>tidusete.github.io/tags/</loc>
-    <lastmod>2020-10-04T19:20:48+02:00</lastmod>
+    <lastmod>2020-10-04T19:49:18+02:00</lastmod>
   </url>
   
   <url>
     <loc>tidusete.github.io/</loc>
-    <lastmod>2020-10-04T19:20:48+02:00</lastmod>
+    <lastmod>2020-10-04T19:49:18+02:00</lastmod>
   </url>
   
   <url>
     <loc>tidusete.github.io/tags/untagged/</loc>
+    <lastmod>2020-10-04T19:49:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>tidusete.github.io/posts/esto-es-hugo/</loc>
     <lastmod>2020-10-04T19:20:48+02:00</lastmod>
   </url>
   
