@@ -17,14 +17,5 @@
       <description>testing your playback sound system</description>
     </item>
     
-    <item>
-      <title>Esto Es Hugo</title>
-      <link>https://tidusete.github.io/posts/esto-es-hugo/</link>
-      <pubDate>Sun, 04 Oct 2020 19:20:48 +0200</pubDate>
-      
-      <guid>https://tidusete.github.io/posts/esto-es-hugo/</guid>
-      <description>you were kicked from the channel</description>
-    </item>
-    
   </channel>
 </rss>

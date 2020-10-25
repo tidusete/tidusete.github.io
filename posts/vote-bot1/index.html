@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.
+Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.
+Our first step, it will be having a stable environment and install selenium library
+pip install selenium Once we have finished installing the package, we will have to proceed to install the drivers." />
+<meta name="keywords" content=", Selenium, Bots, votebots" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://tidusete.github.io/posts/vote-bot1/" />
+
+
+    <title>
+        
+            Create a Voteweb Bot with Python part 1 :: Tidusete&#39;s WebPage 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.393856bf2c430bb6c01d7af07c6fe966e7cce8073435cfbbc46e590bab7405ef.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Create a Voteweb Bot with Python part 1">
+<meta itemprop="description" content="Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.
+Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.
+Our first step, it will be having a stable environment and install selenium library
+pip install selenium Once we have finished installing the package, we will have to proceed to install the drivers.">
+<meta itemprop="datePublished" content="2020-10-11T19:20:48+02:00" />
+<meta itemprop="dateModified" content="2020-10-11T19:20:48+02:00" />
+<meta itemprop="wordCount" content="506">
+
+
+
+<meta itemprop="keywords" content="Selenium,Bots,votebots," />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Create a Voteweb Bot with Python part 1"/>
+<meta name="twitter:description" content="Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.
+Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.
+Our first step, it will be having a stable environment and install selenium library
+pip install selenium Once we have finished installing the package, we will have to proceed to install the drivers."/>
+
+
+
+    <meta property="og:title" content="Create a Voteweb Bot with Python part 1" />
+<meta property="og:description" content="Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.
+Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.
+Our first step, it will be having a stable environment and install selenium library
+pip install selenium Once we have finished installing the package, we will have to proceed to install the drivers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tidusete.github.io/posts/vote-bot1/" />
+<meta property="article:published_time" content="2020-10-11T19:20:48+02:00" />
+<meta property="article:modified_time" content="2020-10-11T19:20:48+02:00" /><meta property="og:site_name" content="Tidusete&#39;s WebPage" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-10-11 19:20:48 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">tidusete@C3PO:~$ cd/home</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://tidusete.github.io/posts">Blog</a></li><li><a href="https://tidusete.github.io/about/">About</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://tidusete.github.io/posts/vote-bot1/">Create a Voteweb Bot with Python part 1</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <p>Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.</p>
+<p>Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.</p>
+<p>Our first step, it will be having a stable environment and install selenium library</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  pip install selenium
+</code></pre></div><p>Once we have finished installing the package, we will have to proceed to install the drivers. As Selenium requires a Driver to interface with the chosen browser, we will have to go to <a href="https://selenium-python.readthedocs.io/installation.html#drivers">https://selenium-python.readthedocs.io/installation.html#drivers</a> and pick one. In the example below, we will use chromeDriver.</p>
+<p>We will have to choose the Chromedriver accord to our version of chrome. To know which version we have installed on chrome, we just have to go to <strong>(&hellip;) -&gt; About Chromium</strong> Ensure to place the binary on your binary PATH e.g. <em>/usr/bin</em> or <em>/usr/locate/bin</em></p>
+<p>After install the selenium package and the chromeDriver&rsquo;s drive, we will start looking for the target&rsquo;s webpage.</p>
+<p><strong>Roadmap: { Accept Cookies -&gt; Login -&gt; Go To Vote }</strong></p>
+<figure class="center">
+    <img src="/images/web1.PNG"/> 
+</figure>
+
+<p>On the home webpage, we can identify 2 important items. The cookies and the User Area.</p>
+<p>To let the script accept the <strong>Cookies</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">from selenium.webdriver.support.ui import WebDriverWait
+# Define a wait that will help us to not execute the code before we can identify an element which class name is cookieinfo-close
+wait = WebDriverWait(driver, 10) 
+wait.until(EC.element_to_be_clickable((By.CLASS_NAME,&#34;cookieinfo-close&#34;)))
+#Click the button to accept cookies
+driver.find_element_by_class_name(&#34;cookieinfo-close&#34;).click() 
+</code></pre></div><p>To let the script to login as a <strong>User</strong>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">driver.find_element_by_name(&#34;login_username&#34;).send_keys(&#34;FAKE_USER&#34;)
+driver.find_element_by_name(&#34;login_password&#34;).send_keys(&#34;FAKE_PASSWD&#34;)  
+driver.find_element_by_name(&#34;login_submit&#34;).send_keys(Keys.RETURN)
+</code></pre></div><p>After login as a user, the new page will be loaded and we will force it to go to the vote option:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">#Wait until the webpage has been loaded the ucp_buttons
+wait = WebDriverWait(driver, 10) 
+wait.until(EC.element_to_be_clickable((By.ID, &#39;ucp_buttons&#39;)))
+driver.get(&#39;https://fake.com/vote&#39;)  #gotovote
+</code></pre></div><p>The typical vote webpage will be like:
+<figure class="center">
+    <img src="/images/voteweb.png"/> 
+</figure>
+
+And finally, the part of the script which will click all the buttons will be:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">wait = WebDriverWait(driver, 10)
+wait.until(EC.element_to_be_clickable((By.ID, &#39;vote&#39;)))
+#Click first button 
+driver.find_element_by_xpath(&#39;//*[@id=&#34;vote&#34;]/tbody/tr[2]/td[3]/form/input[2]&#39;).click()
+pause.sleep(1)
+
+</code></pre></div><p>Is interesting to take a look on the python documentation about Selenium.</p>
+<p>The URL is <a href="https://selenium-python.readthedocs.io/locating-elements.html">https://selenium-python.readthedocs.io/locating-elements.html</a></p>
+<p>Also, is really important to know how we can easily identify this properties using the Development tools kit from chrome and use sometimes the Xpath identifier.
+<figure class="center">
+    <img src="/images/inspectVote.PNG"/> 
+</figure>
+</p>
+<p>Finally, once we understand all the parts of the script, it&rsquo;s time to join it all and build the bot.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+ 
+pause = time
+driver = webdriver.Chrome()
+driver.get(&#34;https://fakeweb.com/&#34;)
+
+#Cookies
+wait = WebDriverWait(driver, 10)
+wait.until(EC.element_to_be_clickable((By.CLASS_NAME,&#34;cookieinfo-close&#34;)))
+driver.find_element_by_class_name(&#34;cookieinfo-close&#34;).click()
+
+#Login
+driver.find_element_by_name(&#34;login_username&#34;).send_keys(&#34;fake&#34;)
+driver.find_element_by_name(&#34;login_password&#34;).send_keys(&#34;fakepass&#34;)  
+driver.find_element_by_name(&#34;login_submit&#34;).send_keys(Keys.RETURN)
+
+#Wait page for loading
+wait = WebDriverWait(driver, 10)
+wait.until(EC.element_to_be_clickable((By.ID, &#39;ucp_buttons&#39;)))
+#gotovote
+driver.get(&#39;https://fake.com/vote&#39;)
+
+#Wait page for loading
+wait = WebDriverWait(driver, 10)
+wait.until(EC.element_to_be_clickable((By.ID, &#39;vote&#39;)))
+
+#button1
+driver.find_element_by_xpath(&#39;//*[@id=&#34;vote&#34;]/tbody/tr[2]/td[3]/form/input[2]&#39;).click()
+pause.sleep(1)
+  .
+  .
+  .
+#button12
+driver.find_element_by_xpath(&#39;//*[@id=&#34;vote&#34;]/tbody/tr[12]/td[3]/form/input[2]&#39;).click()
+pause.sleep(1)
+
+#CloseProgram
+driver.close()
+</code></pre></div><p>At this point, we have a script which will vote every time you invoke it.</p>
+<p>In the next posts, we will start to automate the script and finally end on Cloud environments to become a serverless voteBot.</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://tidusete.github.io/tags/selenium/">Selenium</a></span>
+        <span class="tag"><a href="https://tidusete.github.io/tags/bots/">Bots</a></span>
+        <span class="tag"><a href="https://tidusete.github.io/tags/votebots/">votebots</a></span>
+        
+    </p>
+
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        506 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2020-10-11 19:20
+        
+         
+          
+        
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+
+          
+            <span class="button next">
+              <a href="https://tidusete.github.io/posts/generar-mas/">
+                <span class="button__text">Generar Mas</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            
+                <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

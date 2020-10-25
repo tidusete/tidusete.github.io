@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 04 Oct 2020 19:49:18 +0200</lastBuildDate><atom:link href="https://tidusete.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Oct 2020 19:20:48 +0200</lastBuildDate><atom:link href="https://tidusete.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a Voteweb Bot with Python part 1</title>
+      <link>https://tidusete.github.io/posts/vote-bot1/</link>
+      <pubDate>Sun, 11 Oct 2020 19:20:48 +0200</pubDate>
+      
+      <guid>https://tidusete.github.io/posts/vote-bot1/</guid>
+      <description>Hi buddies, in this post we will talk about how to make a simple vote bot with python using the famous Selenium library.
+Selenium is a suite for automating web applications for testing purposes. But on the naughty side, it can help us to automate all the painful voteweb-based tasks.
+Our first step, it will be having a stable environment and install selenium library
+pip install selenium Once we have finished installing the package, we will have to proceed to install the drivers.</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>https://tidusete.github.io/about/</link>
@@ -26,15 +38,6 @@ Highly motivated about CyberSecurity, Cloud Architecture and DevSecOps!</descrip
       
       <guid>https://tidusete.github.io/posts/generar-mas/</guid>
       <description>testing your playback sound system</description>
-    </item>
-    
-    <item>
-      <title>Esto Es Hugo</title>
-      <link>https://tidusete.github.io/posts/esto-es-hugo/</link>
-      <pubDate>Sun, 04 Oct 2020 19:20:48 +0200</pubDate>
-      
-      <guid>https://tidusete.github.io/posts/esto-es-hugo/</guid>
-      <description>you were kicked from the channel</description>
     </item>
     
   </channel>
