@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops,devsecops,Trivy,Gitlab on Tidusete&#39;s WebPage</title>
+    <link>//localhost:1313/tags/devopsdevsecopstrivygitlab/</link>
+    <description>Recent content in Devops,devsecops,Trivy,Gitlab on Tidusete&#39;s WebPage</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 04 Nov 2024 19:19:20 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/devopsdevsecopstrivygitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trivy &amp; Gitlab</title>
+      <link>//localhost:1313/posts/trivy--gitlab/</link>
+      <pubDate>Mon, 04 Nov 2024 19:19:20 +0100</pubDate>
+      <guid>//localhost:1313/posts/trivy--gitlab/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;</description>
+    </item>
+  </channel>
+</rss>
