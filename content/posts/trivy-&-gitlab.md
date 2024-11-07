@@ -1,13 +1,11 @@
 ---
-title: "Optimizing GitLab CI/CD with Trivy for Image Scanning"
+title: "Optimizing Trivy Scans in GitLab CI/CD: Lessons Learned"
 date: 2024-11-04T19:19:20+01:00
 toc: false
 images:
 tags:
   - devops,devsecops,Trivy,Gitlab
 ---
-
-# Optimizing Trivy Scans in GitLab CI/CD: Lessons Learned
 
 In this post, we’re exploring some strategies to optimize GitLab CI/CD pipelines using Trivy for image scanning. Trivy, a popular open-source scanner from Aqua Security, helps in identifying vulnerabilities within container images. We’ll discuss different scan configurations, compare their performance, and share insights to streamline vulnerability scanning in CI/CD workflows.
 
@@ -53,7 +51,7 @@ To address this, we introduced a separate job specifically for downloading the T
 
 This approach minimized redundant database downloads, reduced pipeline run times, and made the debugging process easier.
 
-## Performance Comparison: Multiple Scans vs. Single Scan with `trivy convert`
+## Performance Comparison: Multiple Scans vs. Single Scan with trivy convert
 
 Another key experiment was comparing the performance of running multiple individual scans (one per output format) with running a single scan followed by `trivy convert` to generate various report formats. Here’s what we found:
 
@@ -78,6 +76,7 @@ Our findings confirm that while caching is beneficial in early pipeline stages, 
 These adjustments have made our CI/CD pipeline more efficient, predictable, and resilient, with pipeline times now optimized for consistent, fast performance without compromising on scan accuracy.
 
 
+_Example .gitlab-ci.yml_
 ```yaml
 stages:
   - simple-scan
